@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Phone, MapPin, ArrowDown, ExternalLink } from 'lucide-react';
-import profileImage from '../assets/image.png';
+import profileImage from '../assets/profile.png';
 
 export default function Hero() {
   return (
@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left order-2 lg:order-1 mt-12 lg:mt-0">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -154,7 +154,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative hidden lg:flex items-center justify-center"
+            className="relative flex items-center justify-center order-1 lg:order-2"
           >
             <div className="relative">
               {/* Glowing ring */}
@@ -168,34 +168,37 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative z-10 w-80 h-80 rounded-full p-1 bg-gradient-to-tr from-primary-500 to-accent-500 glow shadow-2xl"
+              className="relative z-10 w-64 h-64 sm:w-72 sm:h-72 lg:w-90 lg:h-110 rounded-[2.5rem] p-1 bg-gradient-to-tr from-primary-500/20 to-accent-500/20 glow shadow-2xl overflow-hidden"
+  
               >
                 <img
                   src={profileImage}
                   alt="Muhammed Ubaid V K"
-                  className="w-full h-full rounded-full object-cover object-center"
-                  style={{ filter: 'grayscale(100%)' }}
-                />
+                 className="w-full h-full object-cover object-[center_25%] scale-105"
+  />
+
               </motion.div>
 
-              {/* Floating emoji accents */}
+              {/* Floating accents */}
               <motion.div
-                className="absolute -top-4 -right-4 glass-card-light rounded-xl p-3"
-                animate={{ rotate: [0, 5, 0, -5, 0] }}
+                className="absolute -top-4 -right-4 glass-card-light rounded-xl p-3 shadow-lg border border-primary-500/20"
+                animate={{ rotate: [0, 5, 0, -5, 0], y: [0, -5, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               >
-                <span className="text-2xl">🐍</span>
+                <div className="flex flex-col items-center">
+                  <span className="text-xl font-bold bg-green-500/20 text-green-400 px-1 rounded">Dj</span>
+                </div>
               </motion.div>
               <motion.div
-                className="absolute -bottom-4 -left-4 glass-card-light rounded-xl p-3"
-                animate={{ rotate: [0, -5, 0, 5, 0] }}
+                className="absolute -bottom-4 -left-4 glass-card-light rounded-xl p-3 shadow-lg border border-accent-500/20"
+                animate={{ rotate: [0, -5, 0, 5, 0], y: [0, 5, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
               >
                 <span className="text-2xl">⚛️</span>
               </motion.div>
               <motion.div
-                className="absolute top-1/2 -right-8 glass-card-light rounded-xl p-3"
-                animate={{ y: [0, -10, 0] }}
+                className="absolute top-1/2 -right-12 glass-card-light rounded-xl p-3 shadow-lg border border-primary-500/20"
+                animate={{ x: [0, 5, 0], y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
               >
                 <span className="text-2xl">🚀</span>

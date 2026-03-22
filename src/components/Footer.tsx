@@ -28,12 +28,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Built with love */}
-          <div className="flex items-center gap-2 text-dark-400 text-sm">
-            <span>Built with</span>
-            <Heart size={16} className="text-red-500 fill-red-500 animate-pulse" />
-            <span>by Muhammed Ubaid V K</span>
-          </div>
+         
 
           {/* Social Links */}
           <div className="flex items-center gap-3">
