@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Phone, MapPin, ArrowDown, ExternalLink } from 'lucide-react';
-import profileImage from '../assets/profile.png';
+import profileImage from '../assets/profile-v2.png';
 
 export default function Hero() {
   return (
@@ -168,15 +168,13 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-              className="relative z-10 w-64 h-64 sm:w-72 sm:h-72 lg:w-90 lg:h-110 rounded-[2.5rem] p-1 bg-gradient-to-tr from-primary-500/20 to-accent-500/20 glow shadow-2xl overflow-hidden"
-  
+                className="relative z-10 w-64 h-64 sm:w-72 sm:h-72 lg:w-90 lg:h-110 rounded-[2.5rem] p-1 bg-gradient-to-tr from-primary-500/20 to-accent-500/20 glow shadow-2xl overflow-hidden"
               >
                 <img
                   src={profileImage}
                   alt="Muhammed Ubaid V K"
-                 className="w-full h-full object-cover object-[center_25%] scale-105"
-  />
-
+                  className="w-full h-full object-cover object-[center_25%] scale-105"
+                />
               </motion.div>
 
               {/* Floating accents */}
